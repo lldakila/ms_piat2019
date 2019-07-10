@@ -51,10 +51,17 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -76,17 +83,149 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.vb" />
+    <Compile Include="crEthnic.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crEthnic.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crFilipiñana.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crFilipiñana.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crQnA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crQnA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crSwimsuit.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crSwimsuit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crTop5.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crTop5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crTotal.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crTotal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmChecker.Designer.vb">
+      <DependentUpon>frmChecker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChecker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientController.Designer.vb">
+      <DependentUpon>frmClientController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientController.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrystalEthnic.Designer.vb">
+      <DependentUpon>frmCrystalEthnic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalEthnic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrystalFilipiñana.Designer.vb">
+      <DependentUpon>frmCrystalFilipiñana.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalFilipiñana.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrystalQnA.Designer.vb">
+      <DependentUpon>frmCrystalQnA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalQnA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrystalSwimsuit.Designer.vb">
+      <DependentUpon>frmCrystalSwimsuit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalSwimsuit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrystalTop5.Designer.vb">
+      <DependentUpon>frmCrystalTop5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalTop5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrystalTotal.Designer.vb">
+      <DependentUpon>frmCrystalTotal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalTotal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEthnic.Designer.vb">
+      <DependentUpon>frmEthnic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEthnic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilipiñana.Designer.vb">
+      <DependentUpon>frmFilipiñana.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFilipiñana.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFlash.Designer.vb">
+      <DependentUpon>frmFlash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFlash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKeypad.Designer.vb">
+      <DependentUpon>frmKeypad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKeypad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKeypad2.Designer.vb">
+      <DependentUpon>frmKeypad2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKeypad2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.vb">
-      <DependentUpon>frmMain.vb</DependentUpon>
+    <Compile Include="frmQnA.Designer.vb">
+      <DependentUpon>frmQnA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQnA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSwimsuit.Designer.vb">
+      <DependentUpon>frmSwimsuit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSwimsuit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTop5.Designer.vb">
+      <DependentUpon>frmTop5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTop5.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -106,11 +245,83 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="crEthnic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEthnic.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crFilipiñana.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crFilipiñana.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crQnA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crQnA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crSwimsuit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSwimsuit.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crTop5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTop5.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crTotal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTotal.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChecker.resx">
+      <DependentUpon>frmChecker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientController.resx">
+      <DependentUpon>frmClientController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrystalEthnic.resx">
+      <DependentUpon>frmCrystalEthnic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrystalFilipiñana.resx">
+      <DependentUpon>frmCrystalFilipiñana.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrystalQnA.resx">
+      <DependentUpon>frmCrystalQnA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrystalSwimsuit.resx">
+      <DependentUpon>frmCrystalSwimsuit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrystalTop5.resx">
+      <DependentUpon>frmCrystalTop5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrystalTotal.resx">
+      <DependentUpon>frmCrystalTotal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEthnic.resx">
+      <DependentUpon>frmEthnic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilipiñana.resx">
+      <DependentUpon>frmFilipiñana.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFlash.resx">
+      <DependentUpon>frmFlash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKeypad.resx">
+      <DependentUpon>frmKeypad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKeypad2.resx">
+      <DependentUpon>frmKeypad2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQnA.resx">
+      <DependentUpon>frmQnA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSwimsuit.resx">
+      <DependentUpon>frmSwimsuit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTop5.resx">
+      <DependentUpon>frmTop5.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -130,7 +341,72 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backdrop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backdrop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backdropalcala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daks1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candi10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MsPiat", "MsPiat\MsPiat.vbproj", "{BD7DCFBA-A7DA-421C-B8E0-77A51611FDBA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MsTugue2018", "..\MsTugue2018\MsTugue2018\MsTugue2018.vbproj", "{8BBF046F-A3E0-4001-AD73-656EA11F42EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,11 +17,15 @@ Global
 		{BD7DCFBA-A7DA-421C-B8E0-77A51611FDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD7DCFBA-A7DA-421C-B8E0-77A51611FDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD7DCFBA-A7DA-421C-B8E0-77A51611FDBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBF046F-A3E0-4001-AD73-656EA11F42EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBF046F-A3E0-4001-AD73-656EA11F42EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBF046F-A3E0-4001-AD73-656EA11F42EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBF046F-A3E0-4001-AD73-656EA11F42EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {344705DE-007F-4197-90FB-80AFCB493409}
+		SolutionGuid = {C43B1792-EF4E-46B5-963B-37E6301ACDC5}
 	EndGlobalSection
 EndGlobal
